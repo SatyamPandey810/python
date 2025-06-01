@@ -77,3 +77,75 @@
 #     i+=1
 
 # for loop--------------------------------
+# for in list
+# nums=[1,2,3,4,5,6,7];
+# for val in nums:
+#     print(val)
+
+# for in tuple
+# tup=(1,2,3,4,"ram");
+# for vale in tup:
+#     print(vale)
+
+# for in string
+# str="Hello world";
+# for val in str:
+#     print(val)
+# else:
+#     print("End")
+
+# Practice
+# tup=(1,2,3,4,5,6,7,78);
+# x=7
+# ind=0
+# for item in tup:
+#     if(item ==x):
+#         print("found no is",ind);
+#     ind +=1;
+
+#range
+# for i in range(19):
+#     print(i*2)
+
+#Practice
+# for val in range(1,101):
+#     print(val)
+
+# for val in range(100,0,-1):
+#     print(val)
+
+# num=int(input("enter your number :"));
+# for val in range(1,11):
+#     print(num*val)
+
+# pass statement   // skip
+# for val in range(1,10):
+#     pass
+# print(val)
+
+# practice
+# n=50
+# sum=0;
+
+# i=1
+# while i<=n:
+#     sum+=i
+#     i+=1
+# print(sum)
+
+# factorial with while
+# n=5;
+# fact=1
+# i=1
+# while i<=n:
+#     fact+=i
+#     i+=1
+# print(fact)
+
+# factorial with for
+# n=5;
+# fact=1;
+# for i in range(1,n+1):
+#     fact *=i
+# print(fact)
+    
