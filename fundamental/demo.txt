@@ -1,0 +1,3 @@
+name john doe
+age 31
+email john@gmail.com;
