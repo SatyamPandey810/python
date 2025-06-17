@@ -77,7 +77,7 @@
 # student.hello()  
 # student.hello() 
 
-###### Abstactions----------------
+###### Abstactions---------------------------------------------------------------------------------------------
 # class Car():
 #     def __init__(self):
 #         self.acc=False
@@ -180,7 +180,7 @@
 # # print(bank.name)
 # bank.wellcome()
 
-#  inheritance======================================
+#  inheritance================================-------------------------------------------------------------======
 # single inheritance
 # class Car:
 #     color="White"
@@ -277,14 +277,99 @@
 # print(Person.name)
 # print(person.name)
         
+ #class methods
+# class Person:
+#     name="deepak"
+#     @classmethod
+#     def changeName(cls,name):
+#         cls.name=name
+
+# p=Person()
+# p.changeName("rahul kumar")
+# print(p.name)
+# print(Person.name)
+
+# property
+# class Student:
+#     def __init__(self,hindi,math,english):
+#      self.hindi=hindi
+#      self.math=math
+#      self.english=english
+   
+#     @property
+#     def perCul(self):
+#         return str((self.hindi+self.math+self.english)/3) +"%"     
+            
+# s1=Student(10,30,20)
+
+# s1.hindi=98
+# print(s1.perCul)
+
+# s1.getPer()
+# print(s1.per)
+
+## Polymorphism 
+# class Complex():
+#     def __init__(self,num,img):
+#         self.num=num
+#         self.img=img
+        
+#     def number(self):
+#         print(self.num,"i +",self.img,"j")     
+
+# c1=Complex(1,2)
+# c1.number()
+
+# c2=Complex(4,5)
+# c2.number()
+
+#practice
+# class Cricle:
+#     def __init__(self,redius):
+#         self.redius=redius
         
         
+#     def area(self):
+#             return (22/7)*self.redius ** 2
+        
+#     def perimeter(self):
+#             return 2 * (22/7) * self.redius
+
+# c1=Cricle(21)
+# print(c1.perimeter)
+# print(c1.area())
+
+# class Employee:
+#     def __init__(self,role,dept,salary):
+#         self.role=role
+#         self.dept=dept
+#         self.salary=salary
+    
+#     def showDetails(self):
+#         print("role",self.role)    
+#         print("dept",self.dept)
+#         print("salary",self.salary)
 
 
+# class Engineer(Employee):
+#     def __init__(self,name,age):
+#         self.name=name
+#         self.age=age
+#         super().__init__("Engineer" ,"IT","750000")
 
- 
+
+# emp=Engineer("rahul",40)        
+# emp.showDetails()
 
 
-
-
-
+class Order:
+   def __init__(self,item,price):
+        self.item=item
+        self.price=price
+   def __gt__(self,ord2):
+        return self.price>ord2.price
+    
+    
+ord1=Order("chips",20)    
+ord2=Order("Drink",90)
+print(ord1>ord2)
