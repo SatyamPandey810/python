@@ -1,0 +1,26 @@
+<!-- chai/templates/chai/all_chai.html -->
+{% extends 'layout.html' %}
+
+{% block title %}
+All Chai
+{% endblock title %}
+
+{% block content %}
+
+<div class="grid grid-cols-3 gap-2 mt-1">
+    {% for chai in chais %}
+        <div class='bg-blue-300 p-3'>
+          <img src="{{chai.image.url}}" alt='' class="h-[400px] w-full p-6">
+          <p class="text-center font-bold text-2xl">{{chai.name}}</p>
+          <a href='{% url 'chai_details' chai.id %}' class="w-full flex justify-center mt-4">
+            <button type="button" class="bg-green-600 text-white hover:bg-green-500 cursor-pointer p-5 rounded-2xl text-lg font-bold w-full">
+                {{chai.type}} - {{chai.id}}
+            </button>
+          </a>
+        </div>       
+    {% endfor %} 
+</div>
+{% endblock content %}
+
+
+    

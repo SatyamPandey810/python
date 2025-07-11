@@ -1,0 +1,32 @@
+<!-- templates/layout.html -->
+{% load static tailwind_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Home Page{% endblock title %}</title>
+  <!-- <link rel="stylesheet" href="{% static 'style.css' %}"> -->
+  {% tailwind_css %}
+</head>
+
+<body>
+  <nav class="bg-orange-500 ">
+    <div class="flex justify-around py-5 px-5 ">
+      <p class="text-2xl font-bold hover:border-b-2 overflow-hidden cursor-pointer">Home</p>
+      <p class="text-2xl font-bold hover:border-b-2 overflow-hidden cursor-pointer">Contact</p>
+      <p class="text-2xl font-bold hover:border-b-2 overflow-hidden cursor-pointer">About-us</p>
+
+
+    </div>
+    
+  </nav>
+
+  {% block content %}
+  {% endblock content %}
+  <!-- <main>
+  </main> -->
+</body>
+
+</html>
