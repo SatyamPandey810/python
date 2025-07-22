@@ -1,0 +1,42 @@
+{% include 'header.html' %}
+
+<div class="cantainer mt-5">
+    <div class="row">
+        <h3 class="text-center mb-4">Calculator</h3>
+        <form class="mx-4" method="post">
+            {% csrf_token %}
+            <div class="col-md-6 ">
+                <label>Value -1</label>
+                <input type='text' value="{{num1}}" name='num1' class="form-control">
+            </div>
+            <div class="col-md-6 my-3">
+                <label>Select operator</label>
+               <select class="form-control" name="opr">
+                 <option>--- Option ---</option>
+                 <option value="+" {% if opr == "+" %}selected{% endif %}>+</option>
+                 <option value="-" {% if opr == "-" %}selected{% endif %}>-</option>
+                 <option value="*" {% if opr == "*" %}selected{% endif %}>x</option>
+                 <option value="/" {% if opr == "/" %}selected{% endif %}>/</option>
+                 <option value="%" {% if opr == "%" %}selected{% endif %}>%</option>
+               </select>
+            </div>
+            <div class="col-md-6">
+                <label>Value -2</label>
+                <input type='text' value="{{num2}}" name='num2' class="form-control">
+            </div>
+            <div class="col-md-6 my-4">
+                <button class="btn btn-success">Submit</button>
+            </div>
+            <div class="col-md-6">
+               
+                <label class="text-bold">Output</label>
+                <input type='text' value="{{c}}" class="form-control">
+            </div>
+        </form>
+
+    </div>
+
+</div>
+
+
+{% include 'footer.html' %}

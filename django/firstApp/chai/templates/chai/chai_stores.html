@@ -1,13 +1,18 @@
-<!-- chai/templates/chai/all_chai.html -->
 {% extends 'layout.html' %}
 
-{% comment %} {% block title %}
- Chai Details Page
-{% endblock title %} {% endcomment %}
-
 {% block content %}
-test content
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type='submit' class="bg-red-400 p-2 text-lg font-bold rounded-2xl mt-4">Search Store</button>
+</form>
+
+{% if stores %}
+  <h2>Stores available</h2>
+  <ul>
+    {% for store in stores %}
+      <li class="*:text-red-500">{{ store.name }} - {{ store.location }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
 {% endblock content %}
-
-
-    

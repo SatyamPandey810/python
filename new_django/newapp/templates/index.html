@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title }}</title>
+  <style>
+    h1 {
+      text-align: center;
+      color: red;
+    }
+
+    h3 {
+      text-align: center;
+      color: green;
+    }
+
+    div {
+      font-size: 20px;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Hello world i am home page</h1>
+  <h3>{{ mydata }}</h3>
+
+  {% for n in clist %}
+  <div>{{forloop.counter}} {{ n }}</div>
+  {% endfor %}
+  <table border="1" cellpadding="10">
+    <tr>
+      <th>Name</th>
+      <th>Number</th>
+    </tr>
+    <tr>
+      {% for dd in student_details %}
+      <td>{{dd.name}}</td>
+      <td>{{dd.phone}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  {% if numbers|length > 0 %}
+
+
+  {% for num in numbers %}
+  {% if num > 20 %}
+  <div>
+    {{num}}
+  </div>
+  {% endif %}
+  {% endfor %}
+  {% else %}
+ <h4>No data found</h4> 
+  {% endif %}
+</body>
+
+</html>

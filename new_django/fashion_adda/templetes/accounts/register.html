@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+
+<body>
+    {% include 'header.html' %}
+    <div class="container-fluid mt-5">
+        <div class="row d-flex justify-content-center align-items-center ">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                    class="img-fluid" alt="Sample image">
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                <form method="post">
+                    {% csrf_token %}
+                    {% include 'alert.html' %}
+                    <!-- Email input -->
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <label class="form-label">First name</label>
+                        <input type="text" name="first_name" class="form-control form-control-lg"
+                            placeholder="Enter first name" />
+                    </div>
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <label class="form-label">Last name</label>
+
+                        <input type="text" name="last_name" class="form-control form-control-lg"
+                            placeholder="Enter a valid email address" />
+                    </div>
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <label class="form-label">Email address</label>
+                        <input type="email" name="email" class="form-control form-control-lg"
+                            placeholder="Enter a valid email address" />
+                    </div>
+
+                    <!-- Password input -->
+                    <div data-mdb-input-init class="form-outline mb-3">
+                        <label class="form-label">Password</label>
+                        <input type="password" name="password" class="form-control form-control-lg"
+                            placeholder="Enter password" />
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="#!" class="text-body">Forgot password?</a>
+                    </div>
+
+                    <div class="text-center text-lg-start mt-4 pt-2">
+                        <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg"
+                            style="padding-left: 2.5rem; padding-right: 2.5rem;">Register</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

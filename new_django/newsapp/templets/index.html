@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News-App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <style>
+        img {
+            width: 100%;
+            height: 350px !important;
+            object-fit: contain;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="text-center">wellcome to news</h1>
+            <form class="row g-3" method="get">
+                <div class="col-auto">
+                    <input type="text" name="search" class="form-control" value="" placeholder="Search..">
+                </div>               
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mb-3">Search</button>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            {% for news in newsdata %}
+            <div class="col-md-3">
+                <div class="card" style="width: 100%;">
+                    <img src="{{news.image.url}}" class="card-img-top w-100" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{news.title}}</h5>
+                        <!-- <p class="card-text">{{news.description}}</p> -->
+                        <a href="/details/{{news.newSlug}}" class="btn btn-primary">Show details</a>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            No data found
+            {% endfor %}
+        </div>
+        <!-- {% for news in newsdata %}
+        <div class="bg-danger d-flex">
+            <marquee behavior="" direction="">{{news.title}}</marquee>
+        </div>
+        {% endfor %} -->
+    </div>
+
+
+</body>
+
+</html>
