@@ -1,0 +1,98 @@
+{% include 'header.html' %}
+<!-- Section: Design Block -->
+<section class="text-center">
+    <!-- Background image -->
+    <div class="p-5 bg-image" style="
+        background-image: url('https://mdbootstrap.com/img/new/textures/full/171.jpg');
+        height: 300px ;
+        "></div>
+    <!-- Background image -->
+
+    <div class="card mx-4 mx-md-5 shadow-5-strong bg-body-tertiary" style="
+        margin-top: -100px;
+        backdrop-filter: blur(30px);
+        ">
+        <div class="card-body py-5 px-md-5">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="fw-bold mb-5">Update Employee</h2>
+                    <form  method="post" action="{% url 'do_update' emp_id=emp.id %}" >
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="text-start">
+                                    <label class="form-label fw-bold">Name</label>
+                                    <input id='name' name="name" type="text" class="form-control"
+                                        value="{{emp.name}}" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text-start">
+                                    <label class="form-label text-start fw-bold">Employee ID</label>
+                                    <input id="emp_id" name="emp_id" type="text" class="form-control"
+                                        value="{{emp.emp_id}}" />
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="text-start">
+                                    <label class="form-label fw-bold" for="form3Example3">Address</label>
+                                    <textarea id="address" name="address" type="email" id="form3Example3"
+                                        class="form-control">{{emp.address}}</textarea>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="text-start">
+                                    <label class="form-label fw-bold" for="form3Example2">Phone</label>
+                                    <input id="phone" value="{{emp.phone}}" name="phone" type="text" id="form3Example2"
+                                        class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="text-start mt-4">
+                                    <select value="{{emp.department}}" name="department" id="department"
+                                        class="form-select" aria-label="Default select example">
+                                        <option selected name="department" id="department"> Select department</option>
+                                        <option value="CS">Computer science</option>
+                                        <option value="ME">Medical </option>
+                                        <option value="SC">Scientest</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6 mt-3">
+                                <div class="form-check d-flex gap-3">
+                                    <input 
+                                    {% if emp.working %}
+                                        checked
+                                    {% endif %}
+                                         id="working" name="working" 
+                                        class="form-check-input" type="checkbox">
+                                    <label class="form-check-label" for="radioDefault1">
+                                        Yes
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block mb-4 mt-5">
+                            Update Employee
+                        </button>
+
+                        <!-- Register buttons -->
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section: Design Block -->
+</body>
+
+</html>

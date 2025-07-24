@@ -1,0 +1,63 @@
+{% include 'header.html' %}
+
+<div class="container mt-4">
+    <table class="table table-bordered text-center">
+        <thead>
+            <tr>
+                <th scope="col">S. no</th>
+
+                <th scope="col">Name</th>
+                <th scope="col">Emp id</th>
+                <th scope="col">Address</th>
+                <th scope="col">phone no</th>
+                <th scope="col">Department</th>
+                <th scope="col">Working</th>
+                <th scope="col">Action</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for emp in employee %}
+            <tr>
+                <td>{{ forloop.counter }}.</td>
+                <td>{{emp.name}}</td>
+                <td>{{emp.emp_id}}</td>
+                <td>{{emp.address}}</td>
+                <td>{{emp.phone}}</td>
+                <td>{{emp.department}}</td>
+                <td>
+
+                    {% if emp.working == True %}
+                    Yes
+                    {% else %}
+                    No
+                    {% endif %}
+
+                </td>
+                <td class="d-flex justify-content-center">
+                    <a href="{% url 'delete' emp.id %}">
+                        <button class="btn btn-danger"
+                            onclick="return confirm('Are you sure you want to delete this employee?');">Delete</button>
+                    </a>
+                     <a href="{% url 'update' emp.id %}" class="mx-3">
+                        <button class="btn btn-warning"
+                           >Edit</button>
+                    </a>
+                </td>
+
+
+            </tr>
+            {% empty %}
+            employee not found
+            {% endfor %}
+
+        </tbody>
+    </table>
+
+</div>
+
+
+
+</body>
+
+</html>

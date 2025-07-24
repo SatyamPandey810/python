@@ -7,7 +7,7 @@ class Category(BaseModel):
     slug=models.SlugField(unique=True,null=True,blank=True)
 
     def save(self,*args ,**kwargs):
-        self.slug=slugify(self.category_name)
+        self.slug=slugify(self.category_name)   
         super(Category,self).save(*args ,**kwargs)
 
     def __str__(self):
@@ -33,7 +33,22 @@ class SubCategory(BaseModel):
     def __str__(self):
         return self.subcategory_name  
   
+
+class ColorVariant(BaseModel):
+    color_name=models.CharField(max_length=100)
+    prise=models.IntegerField(default=0)
   
+    def __str__(self):
+        return self.color_name 
+  
+  
+class SizeVatiant(BaseModel):  
+    size_name=models.CharField(max_length=100)
+    prise=models.IntegerField(default=0)
+    
+    def __str__(self):
+        return self.size_name
+    
   
 class Product(BaseModel):
     product_name=models.CharField(max_length=100)
@@ -43,6 +58,9 @@ class Product(BaseModel):
     produt_image=models.ImageField(upload_to='images/',null=True,blank=True)
     price=models.IntegerField()
     product_description=models.TextField()
+    color_variant=models.ManyToManyField(ColorVariant,blank=True)
+    size_variant=models.ManyToManyField(SizeVatiant,blank=True)
+    
     
     def save(self,*args ,**kwargs):
         self.slug=slugify(self.product_name)
@@ -51,9 +69,12 @@ class Product(BaseModel):
     def __str__(self):
         return self.product_name  
     
+    def get_product_price_by_size(self,size):
+        return self.price + SizeVatiant.objects.get(size_name=size).price
+        
 
 class ProductImage(BaseModel):
     product=models.ForeignKey(Product,on_delete=models.CASCADE,related_name="product_images")    
     image=models.ImageField(upload_to='images/', null=True, blank=True)
-    
+
     
