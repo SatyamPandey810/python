@@ -1,0 +1,94 @@
+1-D Arrays [1 2 3 4]
+2-D Arrays [[1 2 3 4]]
+3-D Arrays [[[1 2 3 4]]]
+Higher Dimensions Arrays 
+
+if you want to check witch Dimensions array use the methods 'ndim'
+
+Spacial NumPy Arrays :-
+- Array filled with 0's
+- Array filled with 1's
+- Create an empty array 
+- An array with a range of elements
+- Array diagonal element filled with 1's
+- Create an array with valuse that are spaced linearly in a specified interval
+
+Create NumPy Arrays with Random Numbers:-
+- rand()    : the functionn is used to generate a random value between 0 to 1.
+- randn()   : the function is used to generate a random value close to zero this may return positive or negative numbers as well.
+- ranf()    : the function for doing random sampling in numpy. it returns an array of spedified shape and fills it with random floats in the half pen interval [0.0,1.0].
+- randint() : the function is used to generate a random number
+
+Data Type in numPy Arrays :-
+bool_ - Boolean (True or False) stored as a bite
+int_  - Default iteger type (same as C long; normally either int64 or int32)
+intc  - indentical to C int (normally int32 or int 64)
+intp  - integer used for indexing (same as C ssize_t; normally either int32 or int64)
+int8  - Byte(-128 to 127)
+int16 - Integer (-32768 to 32767)
+int32 - Integer (-2147483648 to 2147483647)
+int64 - Integer (-9223372036854775808 to 9223372036854775807)
+uint8 - Unsigned integer (0 to 255)
+uint16 - Unsigned integer (0 to 65535)
+uint32 - Unsigned integer (0 to 4294967295)
+uint64 - Unsigned integer (0 to 18446744073709551615)
+flaot_ - Shorthand for float64
+float16 - Half precision flaot sign bit 5 bits exponent,10 bits mantissa
+float32- Single precision float:sign bit,8 bit exponent bits mantissa
+float64 - Double precision flaot: sign bit 11 bits exponent bits mantissa
+complex_ - Shorthand for complax128
+complax - Complax number,represented by two 32-bit-floats (real and imaginary components)
+complex128 Complex numebr, represented by two 64-bit floats (real and imaginary components)
+
+List of characters that are used to represent dtype in Numpy :
+i - integer
+b - Boolean
+u - unsigned integer
+f - float
+c - complex float
+m - timedelta
+M - datetime
+O - object
+S - string
+U - Unicode string
+V - the fix chunk of memory for other types (void)
+
+Arithmetic Operations:-
+Noraml         With function
+a+b            np.add(a,b) 
+a-b            np.subtract(a,b)
+a*b            np.multiply(a,b)
+a/b            np.divide(a,b)
+a%b            np.mod(a,b)
+a**b           np.power(a,b)
+1/a            np.reciprocal(a)
+
+Arithmetic Functions
+np.min(x)
+np.max(x)
+np.argmin(x)
+np.sqrt(x)
+np.sin(x)
+np.cos(x)
+np.cumsum(x) -->  camluty sum
+
+
+diffrence between Copy and View:-
+
+         Copy                                                       View
+1.the copy owns the data                                1. the view does not own the data
+2.the copy of an array is a new array                   2. A view of the original array
+3.the changes made in the copy data does not reflect    3. any changes made to the view will affect the original array and they 
+                                                           changes made to the original array will aggect the view
+in the original array      
+
+numpy Arrays functions:-
+Join array- joining means putting contents of two or more arrays in a single array. 
+Split array- Splitting breaks one array into multiple. 
+Search array - Search an array for a certain value, and return the indexes that get a match uing (where)
+Search shorted array - which performs a binary search in the array and returns the index where the specified value would be inserted to maintain the search order
+Sort array - Ordered sequence is any sequence that has an order corresponding to element like numeric or alphabetical ascending or descending.
+Filter array - Getting some elements out of an existing array and creating a new array out of them
+Flatten and ravel - convert of 2D array to 1D array 
+Resize-
+

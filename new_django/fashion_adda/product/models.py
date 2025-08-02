@@ -12,8 +12,6 @@ class Category(BaseModel):
 
     def __str__(self):
         return self.category_name
-    
-  
 class SubCategory(BaseModel):
     subcategory_name = models.CharField(max_length=100)
     slug=models.SlugField(unique=True,null=True,blank=True)
