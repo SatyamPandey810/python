@@ -113,9 +113,9 @@ import numpy as np
 
 ################# revel ############### 
 
-# var=np.array([1,5,3,4,2]) 
-# x=np.ravel(var)
-# print(x)
+var=np.array([1,5,3,4,2]) 
+x=np.ravel(var)
+print(x)
 
 
 
