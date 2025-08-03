@@ -113,14 +113,47 @@ import numpy as np
 
 ################# revel ############### 
 
-var=np.array([1,5,3,4,2]) 
-x=np.ravel(var)
-print(x)
+# var=np.array([1,5,3,4,2]) 
+# x=np.ravel(var)
+# print(x)
+
+# ################ insert and delete function ################
+
+#insert 
+# 1D
+# var =np.array([1,2,3,4])
+# print(var.dtype)
+# ins=np.insert(var, (0,2),12)
+# print(ins)
+
+#2D
+# var=([[1,2,3,4],[1,2,3,4]])
+# ins=np.insert(var,2,40, axis=1)
+# ins=np.insert(var,2,[40,41], axis=1)
+# ins=np.insert(var,2,[40,41,42,43], axis=0)
+# print(ins)
+
+## append 
+# 1D
+# var =np.array([1,2,3,4])
+# print(var.dtype)
+# x=np.append(var,5)
+# # x=np.append(var,[6,7,8])
+# print(x)
+
+#2D
+# var=([[1,2,3,4],[1,2,3,4]])
+# # x=np.append(var,[[5,6,7,8]],axis=0)
+# x=np.append(var,4,axis=1)
+
+# print(x)
 
 
+## delete
 
-
-
+var=np.array([1,2,3,4,5])
+dele=np.delete(var,2)
+print(dele)
 
 
 
