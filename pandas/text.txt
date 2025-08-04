@@ -1,0 +1,4 @@
+the pandas provides two data structures for processing the data-
+1. Series- it is defined as a one-dimensional array that is capable of stroring varios data types.
+2. DataFrame - 
+3. Panel - 
