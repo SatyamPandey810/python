@@ -151,9 +151,9 @@ import numpy as np
 
 ## delete
 
-var=np.array([1,2,3,4,5])
-dele=np.delete(var,2)
-print(dele)
+# var=np.array([1,2,3,4,5])
+# dele=np.delete(var,2)
+# print(dele)
 
 
 

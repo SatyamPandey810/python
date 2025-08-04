@@ -92,3 +92,11 @@ Filter array - Getting some elements out of an existing array and creating a new
 Flatten and ravel - convert of 2D array to 1D array 
 Resize-
 
+matrix function in NumPy arrays-
+- Transpose
+- Swapaxes
+- Inverse
+- Power
+- Determinate
+
+
