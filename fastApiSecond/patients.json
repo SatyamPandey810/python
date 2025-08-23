@@ -1,0 +1,44 @@
+{
+    "1": {
+        
+            "name": "Ananya sharma",
+            "city":"Noida",
+            "age":28,
+            "gender":"female",
+            "height":1.34
+        
+    },
+    "2": {
+        
+            "name": "Ditya mishara",
+            "city":"Dubai",
+            "age":22,
+            "gender":"female",
+            "height":1.4
+        
+    },"3": {
+        
+            "name": "Rohit sharma",
+            "city":"Mumbai",
+            "age":40,
+            "gender":"Male",
+            "height":3.2
+        
+    },"4": {
+        
+            "name": "shubhaman gill",
+            "city":"punjab",
+            "age":34,
+            "gender":"male",
+            "height":2.34
+        
+    },"5": {
+        
+            "name": "Virat kohli",
+            "city":"Delhi",
+            "age":89,
+            "gender":"male",
+            "height":3.34
+        
+    }
+}
