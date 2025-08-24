@@ -1,5 +1,6 @@
 from pydantic import BaseModel,EmailStr,AnyUrl,Field,field_validator
 from typing import List,Dict,Optional,Annotated
+
 class Patients(BaseModel):
     name:str
     email:EmailStr
@@ -24,7 +25,7 @@ class Patients(BaseModel):
     def tranfom_name(cls,value):
        return value.upper()
    
-    @field_validator('age',mode='after') #-> before
+    @field_validator('age',mode='after') #-> before 
     @classmethod
     def validate_age(cls,value):
         if 0<value <100:
