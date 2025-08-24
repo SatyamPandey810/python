@@ -1,3 +1,5 @@
+from pydantic import BaseModel,EmailStr,AnyUrl,Field
+from typing import List,Dict,Optional,Annotated
 
 # def insert_petient_data(name,age):    
 #     if type(name)==str and type(age)==int:        
@@ -8,7 +10,6 @@
 
 # insert_petient_data('john',"12")
 
-from pydantic import BaseModel
 # class Patients(BaseModel):
 #     name:str
 #     age:int 
@@ -36,4 +37,71 @@ from pydantic import BaseModel
 # patinets1=Patient(**patients_info)
 
 # patients_get(patinets1)
+#----------------------------------------------------
+# class Patients(BaseModel):
+#     # name:str =Field(max_length=7)
+#     name:Annotated[str,Field(max_length=7,title="name of patient")]
 
+#     email:EmailStr
+#     URL:AnyUrl
+#     age:int=Field(gt=0,lt=20)
+#     weight:float=Field(gt=0)
+#     married:bool=False
+#     allergies:Optional[List[str]]=None
+#     conatact_details:Dict[str,str]
+
+# def patients_info(patient:Patients):
+#     print(patient.name)    
+#     print(patient.age)
+#     print(patient.email)
+#     print(patient.URL)    
+#     print(patient.weight)
+#     print(patient.married)
+#     print(patient.allergies)
+#     print(patient.conatact_details)
+    
+# patient_name={
+#          "name":"satya",
+#          "age":1,
+#          "weight":1,
+#          "URL":" h:e",
+#          "email":"hello@gmail.com",
+#          "married":True,
+#          "allergies":["yes","yes"],
+#          "conatact_details":{"email":"abc@gmail.com","phone":"98989"}}
+
+# patient1=Patients(**patient_name)    
+# patients_info(patient1)
+
+#----------------------------------------------------
+
+class Patients(BaseModel):
+    # name:str =Field(max_length=7)
+    name:str
+    email:EmailStr
+    age:int
+    weight:float
+    married:bool
+    allergies:List[str]
+    conatact_details:Dict[str,str]
+
+def patients_info(patient:Patients):
+    print(patient.name)    
+    print(patient.age)
+    print(patient.email)
+    print(patient.weight)
+    print(patient.married)
+    print(patient.allergies)
+    print(patient.conatact_details)
+    
+patient_name={
+         "name":"satya",
+         "email":"hello@gmail.com",
+         "age":1,
+         "weight":1,
+         "married":True,
+         "allergies":["yes","yes"],
+         "conatact_details":{"email":"abc@gmail.com","phone":"98989"}}
+
+patient1=Patients(**patient_name)    
+patients_info(patient1)
