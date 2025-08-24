@@ -74,34 +74,3 @@ from typing import List,Dict,Optional,Annotated
 # patients_info(patient1)
 
 #----------------------------------------------------
-
-class Patients(BaseModel):
-    # name:str =Field(max_length=7)
-    name:str
-    email:EmailStr
-    age:int
-    weight:float
-    married:bool
-    allergies:List[str]
-    conatact_details:Dict[str,str]
-
-def patients_info(patient:Patients):
-    print(patient.name)    
-    print(patient.age)
-    print(patient.email)
-    print(patient.weight)
-    print(patient.married)
-    print(patient.allergies)
-    print(patient.conatact_details)
-    
-patient_name={
-         "name":"satya",
-         "email":"hello@gmail.com",
-         "age":1,
-         "weight":1,
-         "married":True,
-         "allergies":["yes","yes"],
-         "conatact_details":{"email":"abc@gmail.com","phone":"98989"}}
-
-patient1=Patients(**patient_name)    
-patients_info(patient1)
