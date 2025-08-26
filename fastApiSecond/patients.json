@@ -1,44 +1,72 @@
 {
     "1": {
-        
-            "name": "Ananya sharma",
-            "city":"Noida",
-            "age":28,
-            "gender":"female",
-            "height":1.34
-        
+        "name": "Ananya sharma",
+        "city": "Noida",
+        "age": 28,
+        "gender": "female",
+        "height": 1.34,
+        "weight": 50.9
     },
     "2": {
-        
-            "name": "Ditya mishara",
-            "city":"Dubai",
-            "age":22,
-            "gender":"female",
-            "height":1.4
-        
-    },"3": {
-        
-            "name": "Rohit sharma",
-            "city":"Mumbai",
-            "age":40,
-            "gender":"Male",
-            "height":3.2
-        
-    },"4": {
-        
-            "name": "shubhaman gill",
-            "city":"punjab",
-            "age":34,
-            "gender":"male",
-            "height":2.34
-        
-    },"5": {
-        
-            "name": "Virat kohli",
-            "city":"Delhi",
-            "age":89,
-            "gender":"male",
-            "height":3.34
-        
+        "name": "Ditya mishara",
+        "city": "Dubai",
+        "age": 22,
+        "gender": "female",
+        "height": 1.4,
+        "weight": 30.1
+    },
+    "3": {
+        "name": "Rohit sharma",
+        "city": "Mumbai",
+        "age": 40,
+        "gender": "Male",
+        "height": 3.2,
+        "weight": 45.34
+    },
+    "4": {
+        "name": "shubhaman gill",
+        "city": "punjab",
+        "age": 34,
+        "gender": "male",
+        "height": 2.34,
+        "weight": 10.9
+    },
+    "5": {
+        "name": "Virat kohli",
+        "city": "Delhi",
+        "age": 89,
+        "gender": "male",
+        "height": 3.34,
+        "weight": 50.9
+    },
+    "6": {
+        "name": "ramnath",
+        "city": "noida",
+        "age": 10,
+        "gender": "male",
+        "height": 1.2,
+        "weight": 50.0,
+        "bmi": 34.72,
+        "verdict": "Obese"
+    },
+    "7": {
+        "name": "string",
+        "city": "string",
+        "age": 1,
+        "gender": "male",
+        "height": 1.0,
+        "weight": 0.0,
+        "bmi": 0.0,
+        "verdict": "under weight"
+    },
+    "9": {
+        "name": "string",
+        "city": "string",
+        "age": 1,
+        "gender": "male",
+        "height": 1.0,
+        "weight": 0.0,
+        "bmi": 0.0,
+        "verdict": "under weight"
     }
 }
