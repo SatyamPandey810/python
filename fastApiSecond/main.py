@@ -170,6 +170,7 @@ def save_data(data):
 
 
 # ----------------- Routes -----------------
+# create
 @app.post("/create")
 def create_patient(patient: Patient):
     data = load_data()
@@ -185,7 +186,6 @@ def create_patient(patient: Patient):
     )
 
 # update
-
 @app.put("/edit/{patient_id}")
 def update_patient(patient_id: str, patient_update: PatientUpdate):
     data = load_data()

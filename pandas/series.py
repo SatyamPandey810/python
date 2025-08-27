@@ -1,24 +1,14 @@
 import pandas as pd
 
-# x=[3,4,5,6]
-# a=pd.Series(x,index=['a','b','c','f'],dtype="float",name='python')
-# print(a)
+# x=pd.Series([1,2,3,4],index=["a",'b','c','d'],dtype=float,name='pandas')
+# print(x)
+# print(x['a'])
+# print(type(x))
 
-# print(a[2]) 
-# print(type(a))
+# dis
+# dis=pd.Series({'name':['java','python','html'],'por':[12,13,14,15]})
+# print(dis)
 
-# dictionary
-# dic={"name":["python","javaScript","node"],"age":12,"por":[12,13,14],"rank":[1,2,3]}
-# var=pd.Series(dic)
-# print(var)
-
-# s=pd.Series(10,index=[1,2,3,4,5,6,7])
-# print(type(s))
-# print(s)
-# print(s.dtype)
-
-s=pd.Series(10,index=[1,2,3,4,5,6,7])
-s1=pd.Series(10,index=[1,2,3,4])
-
-print(s+s1)
-
+a=pd.Series(12,index=[1,2,3,4,5,6])
+b=pd.Series(13,index=[1,2,3,4])
+print(a+b)
